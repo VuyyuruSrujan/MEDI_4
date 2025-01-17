@@ -1,9 +1,116 @@
-#history_data{
-    border: 2px solid black;
-    padding: 10px;
-    margin-right: 100px;
-    margin-left: 100px;
-    margin-top: 20px;
-    line-height: 3;
-    margin-bottom: 40px;
-}
+.profile-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
+  }
+  
+  .profile-header {
+    background: var(--primary-color);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-header h1 {
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .profile-details {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-details h1 {
+    color: var(--accent-color);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .profile-details p {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .profile-details b {
+    color: var(--accent-color);
+    min-width: 100px;
+  }
+  
+  .history-section {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .history-section h1 {
+    color: var(--accent-color);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  #history_data {
+    background: var(--primary-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  #history_data:hover {
+    transform: translateY(-5px);
+  }
+  
+  #history_data p {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  #history_data b {
+    color: var(--accent-color);
+    min-width: 100px;
+  }
+  
+  @media (max-width: 768px) {
+    .profile-container {
+      padding: 0 1rem;
+    }
+  
+    .profile-header h1 {
+      font-size: 2rem;
+    }
+  
+    .profile-details,
+    .history-section {
+      padding: 1.5rem;
+    }
+  
+    #history_data {
+      padding: 1rem;
+    }
+  
+    .profile-details p,
+    #history_data p {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+    }
+  
+    .profile-details b,
+    #history_data b {
+      min-width: auto;
+    }
+  }
