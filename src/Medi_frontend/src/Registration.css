@@ -1,0 +1,14 @@
+.registration-page {
+    padding: 2rem 0;
+  }
+  
+  .registration-page h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .registration-icon {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+  }

@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "Medi_backend": {
+      "main": "src/Medi_backend/main.mo",
+      "type": "motoko"
+    },
+    "Medi_frontend": {
+      "dependencies": [
+        "Medi_backend"
+      ],
+      "source": [
+        "src/Medi_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "Medi_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
