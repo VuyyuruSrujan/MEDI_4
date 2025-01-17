@@ -18,8 +18,8 @@
 }
 
 #Connectbtn :hover{
-  background-color: var(--secondary-color);
-  transform: scale(1.05);
+/*   background-color: var(--secondary-color);
+  transform: scale(1.05); */
 }
 
 .nav-container {
