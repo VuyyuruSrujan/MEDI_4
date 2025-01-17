@@ -7,13 +7,20 @@
   z-index: 1000;
 }
 
-/* #Connectbtn{
-  padding: 10px;
-  width: 160px;
-  height: 35px;
-  text-align: center;
-  justify-content: center;
-} */
+#Connectbtn{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--accent-color);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#Connectbtn :hover{
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+}
 
 .nav-container {
   display: flex;
