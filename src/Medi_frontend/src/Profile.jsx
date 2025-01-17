@@ -19,6 +19,7 @@ export default function Profile(){
         getuserRole();
         History();
     }, [principall])
+
     function get_pricipal(principall){
         if(!principall){
             setprin("connect to internet identity");
@@ -49,6 +50,7 @@ export default function Profile(){
             console.log("role checking;",error)
         }
     }
+
     async function History() {
         try {
             console.log("Principal", principall);
@@ -67,35 +69,38 @@ export default function Profile(){
             console.log("error:", error);
         }
     }
-    
 
     return(
         <>
-        <div>
-            <center><h1>{heading}</h1></center>
+        <div className="profile-container">
+            <div className="profile-header">
+                <h1>{heading}</h1>
+            </div>
+            
+            <div className="profile-details">
+                <h1>Details</h1>
+                <p><b>Principal:</b> {prin}</p>
+                <p><b>Role:</b> {role}</p>
+            </div>
+
+            <div className="history-section">
+                <h1>History</h1>
+                <div>
+                    {his_data.map((filtered, index) => {
+                        const istDate = new Date(filtered.date).toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
+                        return (
+                            <div key={index} id="history_data">
+                                <p><b>Doctor ID:</b> {filtered.doctor_id.toText()}</p>
+                                <p><b>Patient ID:</b> {filtered.patient_id.toText()}</p>
+                                <p><b>Date:</b> {istDate}</p>
+                                <p><b>Diagnosis:</b> {filtered.diagnosis}</p>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
         </div>
-        <div>
-            <h1>Details:</h1>
-            <p><b>Prinicpal:</b>{prin}</p>
-            <p><b>Role:</b>{role}</p>
-        </div>
-        <div>
-    <h1>History:</h1>
-    <div>
-        {his_data.map((filtered, index) => {
-            const istDate = new Date(filtered.date).toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
-            return (
-                    <div key={index} id="history_data">
-                        <p><b>Doctor id:</b> {filtered.doctor_id.toText()}</p>
-                        <p><b>Patient id:</b> {filtered.patient_id.toText()}</p>
-                        <p><b>Date:</b> {istDate}</p>
-                        <p><b>Diagnosis:</b>{filtered.diagnosis}</p>
-                    </div>
-                );
-            })}
-        </div>
-    </div>
-    <Footer />
+        <Footer />
         </>
     );
 }
